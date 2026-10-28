@@ -31,5 +31,5 @@ day-first.
 The desk's 5 October update says the `booking-v3` form was retired, so engineering will not fix this
 hint. This issue is closed as not planned.
 
-Source: support KB export, `support-kb/src/lib/data/reports-4471.json`; the matching KB analysis is
-`support-kb/src/routes/kb/incidents/4471/findings/+page.svx`.
+Source: support KB export, `src/lib/data/reports-4471.json`; the matching KB analysis is
+`src/routes/kb/incidents/4471/findings/+page.svx`.

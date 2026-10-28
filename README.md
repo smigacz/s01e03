@@ -1,6 +1,6 @@
 # S01E03 · ticket #4471
 
-The support KB export and signed findings page are in [`support-kb/`](support-kb/).
+This repository is the support KB application. See [the export's conventions](KB-EXPORT.md).
 
 ## GitHub issues
 
@@ -9,9 +9,9 @@ The support KB export and signed findings page are in [`support-kb/`](support-kb
 
 ## Knowledge base page
 
-- Source: [`support-kb/src/routes/kb/incidents/4471/findings/+page.svx`](support-kb/src/routes/kb/incidents/4471/findings/+page.svx)
-- Rendered page: [`support-kb/rendered/kb/incidents/4471/findings/index.html`](support-kb/rendered/kb/incidents/4471/findings/index.html)
-- Full-page screenshot: [`support-kb/rendered/kb/incidents/4471/findings/page.png`](support-kb/rendered/kb/incidents/4471/findings/page.png)
+- Source: [`src/routes/kb/incidents/4471/findings/+page.svx`](src/routes/kb/incidents/4471/findings/+page.svx)
+- Rendered page: [`rendered/kb/incidents/4471/findings/index.html`](rendered/kb/incidents/4471/findings/index.html)
+- Full-page screenshot: [`rendered/kb/incidents/4471/findings/page.png`](rendered/kb/incidents/4471/findings/page.png)
 
 ## Reproduce the rendered page
 
@@ -19,7 +19,7 @@ The HTML is generated from the signed `.svx` page, not maintained separately. Sv
 the report counts and the desk reference during rendering. The original exported incident page
 is preserved; the findings are a separate page and appear in the generated KB index.
 
-From `support-kb/`, run:
+From the repository root, run:
 
 ```sh
 corepack pnpm install --ignore-scripts
@@ -27,4 +27,4 @@ corepack pnpm run build
 corepack pnpm run preview --host 127.0.0.1
 ```
 
-Open `/kb/incidents/4471/findings/` on the preview server. The static site is in `support-kb/rendered/`.
+Open `/kb/incidents/4471/findings/` on the preview server. The static site is in `rendered/`.
