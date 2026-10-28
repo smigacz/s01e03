@@ -24,5 +24,10 @@ through to the calendar invite and reminder.
 
 The parser reads month first for every tenant; day-first values can be flipped.
 
+## Resolution
+
+The desk's 5 October update says engineering fixed the parser with `fix(dates): parse dd/mm for eu locales`.
+This issue is closed as completed.
+
 Source: support KB export, `src/lib/data/reports-4471.json`; the matching KB analysis is
 `src/routes/kb/incidents/4471/findings/+page.svx`.

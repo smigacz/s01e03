@@ -26,5 +26,10 @@ unambiguous and consistent with how the form parses the entered value.
 The form tells people to enter month first even though the tenant's configured form behavior is
 day-first.
 
+## Disposition
+
+The desk's 5 October update says the `booking-v3` form was retired, so engineering will not fix this
+hint. This issue is closed as not planned.
+
 Source: support KB export, `src/lib/data/reports-4471.json`; the matching KB analysis is
 `src/routes/kb/incidents/4471/findings/+page.svx`.
