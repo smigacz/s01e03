@@ -9,6 +9,8 @@ This repository is the support KB application. See [the export's conventions](KB
 
 ## Knowledge base page
 
+- Submission source: [`page.svx`](page.svx)
+- Self-contained rendered page: [`page.html`](page.html)
 - Source: [`src/routes/kb/incidents/4471/findings/+page.svx`](src/routes/kb/incidents/4471/findings/+page.svx)
 - Rendered page: [`rendered/kb/incidents/4471/findings/index.html`](rendered/kb/incidents/4471/findings/index.html)
 - Full-page screenshot: [`rendered/kb/incidents/4471/findings/page.png`](rendered/kb/incidents/4471/findings/page.png)
