@@ -9,5 +9,5 @@ The support KB export and signed findings page are in [`support-kb/`](support-kb
 
 ## Knowledge base page
 
-- Source: [`support-kb/src/routes/kb/incidents/4471/+page.svx`](support-kb/src/routes/kb/incidents/4471/+page.svx)
-- Rendered page: [`support-kb/rendered/kb/incidents/4471/index.html`](support-kb/rendered/kb/incidents/4471/index.html)
+- Source: [`support-kb/src/routes/kb/incidents/4471/findings/+page.svx`](support-kb/src/routes/kb/incidents/4471/findings/+page.svx)
+- Rendered page: [`support-kb/rendered/kb/incidents/4471/findings/index.html`](support-kb/rendered/kb/incidents/4471/findings/index.html)

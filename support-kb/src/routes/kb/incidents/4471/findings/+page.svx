@@ -1,0 +1,51 @@
+---
+layout: runbook
+title: '#4471 · two problems hidden in one ticket'
+owner: support desk
+status: reviewed
+reviewed: 2026-10-28
+signature: Michał Śmigielski
+---
+
+<script>
+  import FindingsTable from '#lib/kb/FindingsTable.svelte';
+  import RenderStamp from '#lib/kb/RenderStamp.svelte';
+</script>
+
+Ticket #4471 is not one date bug. It contains **two distinct problems**, so track one engineering
+issue for each: the shared parser problem and the `booking-v3` form-hint problem.
+
+## Count the reports by cause
+
+The export contains overlapping pages. Deduplicate by report ID before counting, then classify each
+report from its tenant's configured locale and form, plus the reporting channel. `meta.intakeTag` is
+only intake's guess and does not determine the cause. The table computes the report counts from the
+export.
+
+<FindingsTable ticket={4471} />
+
+## Engineering outcomes
+
+### Shared date parser — fixed
+
+The shared parser reads every date month-first. Tenants whose locale writes the day first therefore
+got dates flipped. This affected tenants across app, email, and form channels. The desk's 5 October
+update says engineering fixed it with `fix(dates): parse dd/mm for eu locales`. [GitHub issue #1](https://github.com/smigacz/s01e03/issues/1) is closed as completed; its report count is in the table above.
+
+### `booking-v3` date hint — won't fix
+
+For day-first tenants, `booking-v3` displays `MM/DD/YYYY`. People follow that hint, while the
+tenant's form interprets the date using its own day-first convention. These reports came from the
+form channel and tenants running `booking-v3`. The desk's 5 October update says the form has been
+retired, so engineering won't fix the hint. [GitHub issue #2](https://github.com/smigacz/s01e03/issues/2)
+is closed as not planned; its report count is in the table above.
+
+## Why the original merge hid the split
+
+The accepted triage rule merges reports on matching subject text alone. Different wording for the
+same cause can miss that rule, and similar date wording can hide different causes. The desk's
+`intakeTag` also disagrees with the cause for some reports; use the tenant locale, form version, and
+channel instead. Reports noted as one-day moves remain classified by their tenant's configuration;
+they are not a third cause.
+
+<RenderStamp {signature} />
