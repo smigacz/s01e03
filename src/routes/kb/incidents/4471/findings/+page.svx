@@ -4,7 +4,7 @@ title: '#4471 · two problems hidden in one ticket'
 owner: support desk
 status: reviewed
 reviewed: 2026-10-28
-signature: Michał Śmigielski
+signature: "v1.eyJzdWIiOiIyODgwIiwiYXVkIjoiY2hhbGxlbmdlOndoYXQtaXQtc2hvd3MiLCJpYXQiOjE3OTMxNzQ1ODIsImV4cCI6MTc5MzI2MDk4Mn0.jZ3afcsjtdZCWR7_zrnFvg14NsNjynIs4FGTdHULh5c"
 ---
 
 <script>
