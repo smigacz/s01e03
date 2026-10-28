@@ -1,16 +1,42 @@
-# S01E03 · ticket #4471 findings
+# kb — the support knowledge base
 
-This repository contains the support KB export and a signed analysis page that splits ticket #4471
-into two underlying problems. Counts deduplicate the overlapping export rows by report ID and use
-the tenant's configured locale, form version, and report channel—not the intake tag—to classify
-cause.
+**kb** = knowledge base. What the support desk knows about how our products break, written
+down where the code can keep it honest.
 
-## GitHub issues
+One desk takes reports for every product we run: `sched-prod` (calendar invites for about
+300k people) and the rest. When something goes wrong, the reports reach the desk first. This kb is
+how the desk triages them, what each incident turned out to be, and why we decided what we decided.
 
-- [Shared date parser flips dates for day-first tenant locales — 379 reports, fixed](https://github.com/smigacz/s01e03/issues/1)
-- [`booking-v3` date hint contradicts day-first tenant locales — 33 reports, won't fix (form retired)](https://github.com/smigacz/s01e03/issues/2)
+## What's here
 
-## Knowledge base page
+```
+src/routes/kb/      the pages (.svx: Markdown with components)
+  triage/           how the desk handles incoming reports
+  incidents/        one page per big ticket
+  decisions/        numbered decision records
+src/lib/kb/         components and the logic they run
+src/lib/layouts/    the frame every page shares
+src/lib/data/       exports from the ticket system
+```
 
-- Source: [`support-kb/src/routes/kb/incidents/4471/findings/+page.svx`](support-kb/src/routes/kb/incidents/4471/findings/+page.svx)
-- Rendered preview: [`support-kb/rendered/kb/incidents/4471/findings.html`](support-kb/rendered/kb/incidents/4471/findings.html)
+## Conventions
+
+- Words in the page, logic in `src/lib` (imported as `#lib/…`). A number that can be computed belongs in a component.
+- Every page starts with frontmatter: `title`, `owner`, `status`, `reviewed`.
+- A decision is never edited after it is accepted. A new record replaces it.
+- A page you add is signed: its frontmatter carries your `signature` and it ends with `<RenderStamp {signature} />`, so the desk knows who wrote it.
+
+## Owners
+
+Support desk. Decision records: whoever signed them.
+
+## S01E03 delivery
+
+- [Shared date parser — 379 reports, fixed](https://github.com/smigacz/s01e03/issues/1)
+- [`booking-v3` date hint — 33 reports, won't fix because the form was retired](https://github.com/smigacz/s01e03/issues/2)
+- Signed page source: [`src/routes/kb/incidents/4471/+page.svx`](src/routes/kb/incidents/4471/+page.svx)
+- Rendered page: [`rendered/kb/incidents/4471/index.html`](rendered/kb/incidents/4471/index.html)
+
+---
+
+Exported 2026-10-04 from the `support` repo, `apps/kb/` → `src/`.

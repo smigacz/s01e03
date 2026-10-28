@@ -12,7 +12,7 @@ signature: Michał Śmigielski
   import RenderStamp from '#lib/kb/RenderStamp.svelte';
 </script>
 
-Ticket #4471 is not one date bug. It contains **two distinct problems**, so file one engineering
+Ticket #4471 is not one date bug. It contains **two distinct problems**, so track one engineering
 issue for each: the shared parser problem and the `booking-v3` form-hint problem.
 
 ## Count the reports by cause

@@ -30,4 +30,4 @@ The desk's 5 October update says engineering fixed the parser with `fix(dates): 
 This issue is closed as completed.
 
 Source: support KB export, `src/lib/data/reports-4471.json`; the matching KB analysis is
-`src/routes/kb/incidents/4471/findings/+page.svx`.
+`src/routes/kb/incidents/4471/+page.svx`.
