@@ -7,8 +7,8 @@ cause.
 
 ## GitHub issues
 
-- [Shared date parser flips dates for day-first tenant locales — 379 reports](https://github.com/smigacz/s01e03/issues/1)
-- [`booking-v3` date hint contradicts day-first tenant locales — 33 reports](https://github.com/smigacz/s01e03/issues/2)
+- [Shared date parser flips dates for day-first tenant locales — 379 reports, fixed](https://github.com/smigacz/s01e03/issues/1)
+- [`booking-v3` date hint contradicts day-first tenant locales — 33 reports, won't fix (form retired)](https://github.com/smigacz/s01e03/issues/2)
 
 ## Knowledge base page
 

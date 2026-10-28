@@ -66,12 +66,12 @@
         </table>
         <p class="note">5 reports describe a one-day move; tenant and form configuration still place them under <code>parser</code>.</p>
 
-        <h2>Problems to track separately</h2>
-        <h3>Shared date parser</h3>
-        <p>The shared parser reads every date month-first. Tenants whose locale writes the day first therefore get dates flipped. This affects tenants across app, email, and form channels. Track the parser defect in <a href="https://github.com/smigacz/s01e03/issues/1">GitHub issue #1</a>; its report count is in the table above.</p>
+        <h2>Engineering outcomes</h2>
+        <h3>Shared date parser — fixed</h3>
+        <p>The shared parser reads every date month-first. Tenants whose locale writes the day first therefore got dates flipped. This affected tenants across app, email, and form channels. The desk's 5 October update says engineering fixed it with <code>fix(dates): parse dd/mm for eu locales</code>. <a href="https://github.com/smigacz/s01e03/issues/1">GitHub issue #1</a> is closed as completed; its report count is in the table above.</p>
 
-        <h3><code>booking-v3</code> date hint</h3>
-        <p>For day-first tenants, <code>booking-v3</code> displays <code>MM/DD/YYYY</code>. People follow that hint, while the tenant's form interprets the date using its own day-first convention. These reports come from the form channel and tenants running <code>booking-v3</code>. Track this form-hint defect in <a href="https://github.com/smigacz/s01e03/issues/2">GitHub issue #2</a>; its report count is in the table above.</p>
+        <h3><code>booking-v3</code> date hint — won't fix</h3>
+        <p>For day-first tenants, <code>booking-v3</code> displays <code>MM/DD/YYYY</code>. People follow that hint, while the tenant's form interprets the date using its own day-first convention. These reports came from the form channel and tenants running <code>booking-v3</code>. The desk's 5 October update says the form has been retired, so engineering won't fix the hint. <a href="https://github.com/smigacz/s01e03/issues/2">GitHub issue #2</a> is closed as not planned; its report count is in the table above.</p>
 
         <h2>Why the original merge hid the split</h2>
         <p>The accepted triage rule merges reports on matching subject text alone. Different wording for the same cause can miss that rule, and similar date wording can hide different causes. The desk's <code>intakeTag</code> also disagrees with the cause for some reports; use the tenant locale, form version, and channel instead. Reports noted as one-day moves remain classified by their tenant's configuration; they are not a third cause.</p>
