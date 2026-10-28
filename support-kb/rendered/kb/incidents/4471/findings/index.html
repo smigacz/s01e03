@@ -3,82 +3,62 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>#4471 · two problems hidden in one ticket · support kb</title>
-    <style>
-      :root { --bg: #fbfaf7; --fg: #1d1d1b; --muted: #6b6a66; --line: #e3e0d8; --accent: #2f6f5e; }
-      @media (prefers-color-scheme: dark) {
-        :root { --bg: #171716; --fg: #ecebe6; --muted: #9c9a93; --line: #34332f; --accent: #6fbfa6; }
-      }
-      body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.6 system-ui, sans-serif; }
-      .kb { max-width: 760px; margin: 0 auto; padding: 2rem 16px 4rem; }
-      .crumb { color: var(--muted); font: 0.8rem ui-monospace, monospace; text-decoration: none; }
-      h1 { margin: 0.25rem 0 0.5rem; line-height: 1.2; }
-      .meta { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; margin: 0; color: var(--muted); font-size: 0.85rem; }
-      .status { border: 1px solid var(--line); border-radius: 99px; padding: 0 0.6rem; }
-      table { width: 100%; margin: 1rem 0; border-collapse: collapse; font-size: 0.92rem; }
-      th, td { padding: 0.35rem 0.5rem; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
-      a { color: var(--accent); }
-      code { font-family: ui-monospace, 'Cascadia Code', Menlo, monospace; font-size: 0.88em; }
-      .sum { font-size: 1.1rem; }
-      .note, .tags { color: var(--muted); font-size: 0.85rem; }
-      .stamp { margin: 2rem 0 0; color: var(--muted); font: 0.85rem ui-monospace, monospace; }
-      .stamp b { color: var(--accent); letter-spacing: 0.04em; }
-      footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.8rem; }
-    </style>
+    <link href="../../../../_app/immutable/entry/start.DoICW-qX.js" rel="modulepreload">
+		<link href="../../../../_app/immutable/chunks/Vy3a8_yY.js" rel="modulepreload">
+		<link href="../../../../_app/immutable/chunks/DxApmzfV.js" rel="modulepreload">
+		<link href="../../../../_app/immutable/chunks/UkrPCmWY.js" rel="modulepreload">
+		<link href="../../../../_app/immutable/entry/app.BnXQtwjM.js" rel="modulepreload">
+		<link href="../../../../_app/immutable/chunks/BNAT3XsK.js" rel="modulepreload">
+		<link href="../../../../_app/immutable/chunks/DC6VuhrR.js" rel="modulepreload">
+		<link href="../../../../_app/immutable/chunks/Duv-ka-a.js" rel="modulepreload">
+		<link href="../../../../_app/immutable/chunks/CQQYlnWr.js" rel="modulepreload">
+		<link href="../../../../_app/immutable/nodes/0.qTzub-c2.js" rel="modulepreload">
+		<link href="../../../../_app/immutable/chunks/B2Xe9YtK.js" rel="modulepreload">
+		<link href="../../../../_app/immutable/nodes/5.Gb640zIV.js" rel="modulepreload">
+		<link href="../../../../_app/immutable/chunks/CAIu_xTA.js" rel="modulepreload">
+		<link href="../../../../_app/immutable/chunks/BKxq0eqq.js" rel="modulepreload">
+		<link href="../../../../_app/immutable/chunks/DsH2Lncc.js" rel="modulepreload">
+		<link href="../../../../_app/immutable/chunks/iXLSwIXB.js" rel="modulepreload">
+		<!--e2jw2j--><!----><title>#4471 · two problems hidden in one ticket · support kb</title>
+		<link href="../../../../_app/immutable/assets/runbook.BhhgOc_n.css" rel="stylesheet">
+		<link href="../../../../_app/immutable/assets/5.cOUgZE7f.css" rel="stylesheet">
   </head>
-  <body>
-    <article class="kb">
-      <header>
-        <a class="crumb" href="/kb">support desk · kb</a>
-        <h1>#4471 · two problems hidden in one ticket</h1>
-        <p class="meta">
-          <span>owner <b>support desk</b></span>
-          <span class="status">reviewed</span>
-          <span>reviewed 2026-10-28</span>
-        </p>
-      </header>
+  <body data-sveltekit-preload-data="hover">
+    <div style="display: contents"><!--[--><!--[0--><!--[--><!--[--><div class="kb svelte-e2jw2j"><header><a class="crumb svelte-e2jw2j" href="/kb">support desk · kb</a> <h1 class="svelte-e2jw2j">#4471 · two problems hidden in one ticket</h1> <p class="meta svelte-e2jw2j"><span>owner <b>support desk</b></span> <span class="status reviewed svelte-e2jw2j">reviewed</span> <span class="svelte-e2jw2j">reviewed 2026-10-28 · 0 days ago</span></p></header> <!--[-1--><!--]--> <main><p>Ticket #4471 is not one date bug. It contains <strong>two distinct problems</strong>, so track one engineering
+issue for each: the shared parser problem and the <code>booking-v3</code> form-hint problem.</p> <h2>Count the reports by cause</h2> <p>The export contains overlapping pages. Deduplicate by report ID before counting, then classify each
+report from its tenant’s configured locale and form, plus the reporting channel. <code>meta.intakeTag</code> is
+only intake’s guess and does not determine the cause. The table computes the report counts from the
+export.</p> <p class="sum svelte-lnwuxr"><strong>412</strong> unique reports merged into #4471 · <strong>2</strong> distinct causes</p> <table><thead><tr><th>problem</th><th>reports</th><th>tenants</th><th>channels</th><th>intake tag</th></tr></thead><tbody><!--[--><tr><td>Shared date parser ignores day-first tenant locale</td><td><strong>379</strong></td><td><!--[--><!--[-1--><!--]--><code>alder.physio</code> ×23<!--[0--><br/><!--]--><code>copper.studio</code> ×19<!--[0--><br/><!--]--><code>harbour.dental</code> ×52<!--[0--><br/><!--]--><code>kettle.books</code> ×47<!--[0--><br/><!--]--><code>lantern.row</code> ×28<!--[0--><br/><!--]--><code>long.table</code> ×39<!--[0--><br/><!--]--><code>morrow.tax</code> ×40<!--[0--><br/><!--]--><code>nine.lanterns</code> ×44<!--[0--><br/><!--]--><code>pale.harbour</code> ×21<!--[0--><br/><!--]--><code>ridge.clinic</code> ×36<!--[0--><br/><!--]--><code>stone.and.sons</code> ×30<!--]--></td><td><!--[--><!--[-1--><!--]-->app<!--[0-->·<!--]-->email<!--[0-->·<!--]-->form<!--]--></td><td>parser ×356 · hint ×23</td></tr><tr><td>booking-v3 date hint contradicts day-first tenant locale</td><td><strong>33</strong></td><td><!--[--><!--[-1--><!--]--><code>alder.physio</code> ×12<!--[0--><br/><!--]--><code>copper.studio</code> ×11<!--[0--><br/><!--]--><code>pale.harbour</code> ×10<!--]--></td><td><!--[--><!--[-1--><!--]-->form<!--]--></td><td>hint ×18 · parser ×15</td></tr><!--]--></tbody></table> <!--[--><!--[0--><p class="note svelte-lnwuxr">5 reports describe a one-day move; tenant and form configuration still place them under <code>parser</code>.</p><!--]--><!--[-1--><!--]--><!--]--><!----> <h2>Engineering outcomes</h2> <h3>Shared date parser — fixed</h3> <p>The shared parser reads every date month-first. Tenants whose locale writes the day first therefore
+got dates flipped. This affected tenants across app, email, and form channels. The desk’s 5 October
+update says engineering fixed it with <code>fix(dates): parse dd/mm for eu locales</code>. <a href="https://github.com/smigacz/s01e03/issues/1" rel="nofollow">GitHub issue #1</a> is closed as completed; its report count is in the table above.</p> <h3><code>booking-v3</code> date hint — won’t fix</h3> <p>For day-first tenants, <code>booking-v3</code> displays <code>MM/DD/YYYY</code>. People follow that hint, while the
+tenant’s form interprets the date using its own day-first convention. These reports came from the
+form channel and tenants running <code>booking-v3</code>. The desk’s 5 October update says the form has been
+retired, so engineering won’t fix the hint. <a href="https://github.com/smigacz/s01e03/issues/2" rel="nofollow">GitHub issue #2</a> is closed as not planned; its report count is in the table above.</p> <h2>Why the original merge hid the split</h2> <p>The accepted triage rule merges reports on matching subject text alone. Different wording for the
+same cause can miss that rule, and similar date wording can hide different causes. The desk’s <code>intakeTag</code> also disagrees with the cause for some reports; use the tenant locale, form version, and
+channel instead. Reports noted as one-day moves remain classified by their tenant’s configuration;
+they are not a third cause.</p> <!--[0--><p class="stamp svelte-1280m42">desk ref <b class="svelte-1280m42">DR-MGJA-6RTQ</b></p><!--]--><!----><!----></main> <footer class="svelte-e2jw2j">Pages are written by people. Tables and charts are built from data at render time.</footer></div><!--]--><!----><!--]--><!--]--> <!--[-1--><!--]--><!--]-->
+			
+			<script>
+				{
+					__sveltekit_1y58e0q = {
+						base: new URL("../../../..", location).pathname.slice(0, -1)
+					};
 
-      <main>
-        <p>Ticket #4471 is not one date bug. It contains <strong>two distinct problems</strong>, so track one engineering issue for each: the shared parser problem and the <code>booking-v3</code> form-hint problem.</p>
+					const element = document.currentScript.parentElement;
 
-        <h2>Count the reports by cause</h2>
-        <p>The export contains overlapping pages. Deduplicate by report ID before counting, then classify each report from its tenant's configured locale and form, plus the reporting channel. <code>meta.intakeTag</code> is only intake's guess and does not determine the cause. The table computes the report counts from the export.</p>
-
-        <p class="sum"><strong>412</strong> unique reports merged into #4471 · <strong>2</strong> distinct causes</p>
-        <table>
-          <thead><tr><th>problem</th><th>reports</th><th>tenants</th><th>channels</th><th>intake tag</th></tr></thead>
-          <tbody>
-            <tr>
-              <td>Shared date parser ignores day-first tenant locale</td>
-              <td><strong>379</strong></td>
-              <td><code>alder.physio</code> ×23<br /><code>copper.studio</code> ×19<br /><code>harbour.dental</code> ×52<br /><code>kettle.books</code> ×47<br /><code>lantern.row</code> ×28<br /><code>long.table</code> ×39<br /><code>morrow.tax</code> ×40<br /><code>nine.lanterns</code> ×44<br /><code>pale.harbour</code> ×21<br /><code>ridge.clinic</code> ×36<br /><code>stone.and.sons</code> ×30</td>
-              <td>app · email · form</td>
-              <td class="tags">parser ×356 · hint ×23</td>
-            </tr>
-            <tr>
-              <td><code>booking-v3</code> date hint contradicts day-first tenant locale</td>
-              <td><strong>33</strong></td>
-              <td><code>alder.physio</code> ×12<br /><code>copper.studio</code> ×11<br /><code>pale.harbour</code> ×10</td>
-              <td>form</td>
-              <td class="tags">parser ×15 · hint ×18</td>
-            </tr>
-          </tbody>
-        </table>
-        <p class="note">5 reports describe a one-day move; tenant and form configuration still place them under <code>parser</code>.</p>
-
-        <h2>Engineering outcomes</h2>
-        <h3>Shared date parser — fixed</h3>
-        <p>The shared parser reads every date month-first. Tenants whose locale writes the day first therefore got dates flipped. This affected tenants across app, email, and form channels. The desk's 5 October update says engineering fixed it with <code>fix(dates): parse dd/mm for eu locales</code>. <a href="https://github.com/smigacz/s01e03/issues/1">GitHub issue #1</a> is closed as completed; its report count is in the table above.</p>
-
-        <h3><code>booking-v3</code> date hint — won't fix</h3>
-        <p>For day-first tenants, <code>booking-v3</code> displays <code>MM/DD/YYYY</code>. People follow that hint, while the tenant's form interprets the date using its own day-first convention. These reports came from the form channel and tenants running <code>booking-v3</code>. The desk's 5 October update says the form has been retired, so engineering won't fix the hint. <a href="https://github.com/smigacz/s01e03/issues/2">GitHub issue #2</a> is closed as not planned; its report count is in the table above.</p>
-
-        <h2>Why the original merge hid the split</h2>
-        <p>The accepted triage rule merges reports on matching subject text alone. Different wording for the same cause can miss that rule, and similar date wording can hide different causes. The desk's <code>intakeTag</code> also disagrees with the cause for some reports; use the tenant locale, form version, and channel instead. Reports noted as one-day moves remain classified by their tenant's configuration; they are not a third cause.</p>
-
-        <p class="stamp">desk ref <b>DR-MGJA-6RTQ</b></p>
-      </main>
-      <footer>Pages are written by people. Tables and charts are built from data at render time.</footer>
-    </article>
+					Promise.all([
+						import("../../../../_app/immutable/entry/start.DoICW-qX.js"),
+						import("../../../../_app/immutable/entry/app.BnXQtwjM.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 5],
+							data: [null,null],
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
   </body>
 </html>
